@@ -1,0 +1,1 @@
+This script used to get the count of the instance in aws all regions.
