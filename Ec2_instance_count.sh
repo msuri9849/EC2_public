@@ -16,7 +16,7 @@ pipeline {
     #echo "Checking instance details in the region: $Region "
     #Instance_Region=$(sed -e \'s/-/_/g\' <<<"${Region}")
     #echo "${Instance_Region}"
-    Inscount=$(aws ec2 describe-instances --region "$Region" | jq ".Reservations[].Instances[].InstanceId" | tr -d \'"\' | wc -l)
+    Inscount=$(aws ec2 describe-instances --region "$Region" | jq ".Reservations[].Instances[].InstanceId" | tr -d \'"\' | wc -l) >>out.log
     if [ $Inscount -ne 0 ]; then
         echo "Checking instance details in the region: $Region "
         echo "================================================="
