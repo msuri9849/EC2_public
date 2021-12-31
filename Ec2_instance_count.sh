@@ -16,7 +16,7 @@ pipeline {
         git init
         git add .
         git commit -m "Commiting for region"
-        git push -u origion testing https://github.com/msuri9849/EC2_public.git
+        git push -u origion testing 
         echo "Checking instance details in the region: $Region "
         echo "================================================="
         echo -e " Total Instance available in the region:$Region and count as: $Inscount\\n"
