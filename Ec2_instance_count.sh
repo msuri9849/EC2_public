@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Git_CLONE') {
-            steps {
-                git branch: 'testing', credentialsId: '44c1b9e5-4c23-4204-8852-60752b17a3a0', url: 'https://github.com/msuri9849/EC2_public.git'
-                }
-            }
-        }
         stage('Ec2_count') {
             steps {
                 withAWS(credentials: '9cc1463e-6592-48a0-bc73-350382a29c98', region: 'ap-southeast-1') {
