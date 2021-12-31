@@ -20,8 +20,8 @@ pipeline {
     if [ $Inscount -ne 0 ]; then
         echo "$Inscount" >Inscount_count_${Region}
         git add .
-        git commit -m "Commiting for region ${Region}"
-        git push https://github.com/msuri9849/EC2_public.git
+        git commit -m "Commiting for region"
+        git push -u origion testing https://github.com/msuri9849/EC2_public.git
         echo "Checking instance details in the region: $Region "
         echo "================================================="
         echo -e " Total Instance available in the region:$Region and count as: $Inscount\\n"
