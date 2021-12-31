@@ -7,6 +7,7 @@ pipeline{
 	GIT_LOC     = 'msuri9849'
 	GIT_BRANCH = 'testing'
      }
+	 stages{
      stage('Git_Repoclone'){
 	    steps{
 		sh '''
@@ -37,4 +38,5 @@ done'''
                 }
             }
         }
+		}
 		}
