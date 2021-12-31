@@ -12,6 +12,8 @@ pipeline {
     Inscount=$(aws ec2 describe-instances --region "$Region" | jq ".Reservations[].Instances[].InstanceId" | tr -d \'"\' | wc -l)
     if [ $Inscount -ne 0 ]; then
         echo "$Inscount" >Inscount_count_${Region}
+        git status
+        git init
         git add .
         git commit -m "Commiting for region"
         git push -u origion testing https://github.com/msuri9849/EC2_public.git
